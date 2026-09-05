@@ -52,10 +52,14 @@ nav a{
   position:absolute; z-index:2; font-size:.75rem; background:rgba(240,238,232,.8);
   padding:6px 8px; border-bottom:1px solid rgba(23,23,21,.35); backdrop-filter:blur(4px);
 }
-.tag-left{left:5%; top:35%}
-.tag-right{right:5%; top:33%}
-.tag-left.lower{top:53%}
-.tag-right.lower{top:51%}
+.tag-left{left:5%; top:30%}
+.tag-right{right:5%; top:28%}
+
+.tag-left.middle{top:44%}
+.tag-right.middle{top:42%}
+
+.tag-left.lower{top:58%}
+.tag-right.lower{top:56%}
 .hero-copy{
   display:flex; flex-direction:column; justify-content:center;
   padding:clamp(44px,6vw,96px);
