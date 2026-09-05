@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Matheus da Silva Dantas — Software Development, IT Support and Application Support portfolio." />
+  <meta name="theme-color" content="#f0eee8" />
   <title>Matheus Dantas — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,10 +13,12 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top">MD</a>
-    <nav aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="Matheus Dantas — Home">MD</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
+      <a href="#background">Background</a>
       <a href="#projects">Projects</a>
       <a href="#support">Support</a>
       <a href="#contact">Contact</a>
@@ -23,25 +26,23 @@
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-photo">
         <img src="assets/matheus-cover.png" alt="Matheus Dantas" />
-       <div class="photo-tag tag-left">Python</div>
-<div class="photo-tag tag-right">Git & GitHub</div>
-
-<div class="photo-tag tag-left middle">HTML & CSS</div>
-<div class="photo-tag tag-right middle">Power BI</div>
-
-<div class="photo-tag tag-left lower">Troubleshooting</div>
-<div class="photo-tag tag-right lower">MySQL</div>
+        <div class="photo-tag tag-left">Python</div>
+        <div class="photo-tag tag-right">Git & GitHub</div>
+        <div class="photo-tag tag-left middle">HTML & CSS</div>
+        <div class="photo-tag tag-right middle">Power BI</div>
+        <div class="photo-tag tag-left lower">Troubleshooting</div>
+        <div class="photo-tag tag-right lower">MySQL</div>
       </div>
 
       <div class="hero-copy">
         <p class="eyebrow">SOFTWARE DEVELOPMENT · IT SUPPORT · APPLICATION SUPPORT</p>
-        <h1>Matheus da Silva <em>Dantas</em></h1>
+        <h1 id="hero-title">Matheus da Silva <em>Dantas</em></h1>
         <p class="intro">
           Building practical software solutions and solving technical problems through
-development, troubleshooting and application support.
+          development, troubleshooting and application support.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">View projects</a>
@@ -51,99 +52,158 @@ development, troubleshooting and application support.
       </div>
     </section>
 
-    <section class="section editorial-grid" id="about">
-      <div class="section-number">01</div>
-      <div>
-        <p class="eyebrow">ABOUT</p>
-        <h2>Technology with a practical purpose.</h2>
+    <section class="section about-section" id="about">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">ABOUT</p>
+          <h2>Building solutions.<br><em>Solving problems.</em></h2>
+        </div>
+        <span class="section-number">01</span>
       </div>
-      <div class="body-copy">
-        <p>
-          I am a graduate in Systems Analysis and Development, focused on software development
-          and building practical skills in technical and application support.
-        </p>
-        <p>
-          My portfolio is centered on practical projects that demonstrate what I can actually do:
-          programming with Python, working with MySQL, using Git and GitHub, analyzing data
-          with Power BI and Excel, and documenting technical problem-solving.
-        </p>
+
+      <div class="about-layout">
+        <div class="about-copy body-copy">
+          <p class="lead">
+            I am a graduate in Systems Analysis and Development with a practical focus on
+            software development, IT support and application support.
+          </p>
+          <p>
+            I use Python, MySQL, HTML & CSS, Git and GitHub, Power BI and Excel to build projects,
+            work with data and solve technical problems. This portfolio brings together hands-on
+            projects and support scenarios that show how I approach development, troubleshooting
+            and technical documentation.
+          </p>
+        </div>
+
+        <dl class="profile-card">
+          <div><dt>Education</dt><dd>Systems Analysis & Development</dd></div>
+          <div><dt>Focus</dt><dd>Development · IT Support · Application Support</dd></div>
+          <div><dt>Location</dt><dd>Brazil → Porto, Portugal</dd></div>
+          <div><dt>Availability</dt><dd>Open to opportunities</dd></div>
+        </dl>
       </div>
     </section>
 
-    <section class="section" id="skills">
+    <section class="section skills-section" id="skills">
       <div class="section-heading">
         <div>
           <p class="eyebrow">CORE SKILLS</p>
-          <h2>Development & support.</h2>
+          <h2>Tools for building,<br><em>analyzing and supporting.</em></h2>
         </div>
         <span class="section-number">02</span>
       </div>
 
-      <div class="skill-columns">
+      <div class="skill-grid">
         <article class="skill-card">
           <p class="card-kicker">SOFTWARE DEVELOPMENT</p>
           <h3>Build</h3>
           <ul>
-            <li>Python</li>
-            <li>MySQL / SQL</li>
-            <li>Git & GitHub</li>
-            <li>Power BI</li>
-            <li>Excel</li>
+            <li><span>01</span>Python</li>
+            <li><span>02</span>HTML & CSS</li>
+            <li><span>03</span>MySQL / SQL</li>
+            <li><span>04</span>Git & GitHub</li>
           </ul>
         </article>
 
         <article class="skill-card">
+          <p class="card-kicker">DATA & BUSINESS INTELLIGENCE</p>
+          <h3>Analyze</h3>
+          <ul>
+            <li><span>01</span>Power BI</li>
+            <li><span>02</span>Excel</li>
+            <li><span>03</span>Data analysis</li>
+            <li><span>04</span>Dashboard building</li>
+          </ul>
+        </article>
+
+        <article class="skill-card dark-card">
           <p class="card-kicker">IT & APPLICATION SUPPORT</p>
           <h3>Solve</h3>
           <ul>
-            <li>Troubleshooting</li>
-            <li>Technical support</li>
-            <li>User support</li>
-            <li>Problem analysis</li>
-            <li>SQL queries</li>
-            <li>Technical documentation</li>
+            <li><span>01</span>Troubleshooting</li>
+            <li><span>02</span>User support</li>
+            <li><span>03</span>Application support</li>
+            <li><span>04</span>Technical documentation</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section class="section" id="projects">
+    <section class="section background-section" id="background">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BACKGROUND</p>
+          <h2>A practical path into technology.</h2>
+        </div>
+        <span class="section-number">03</span>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-year">2021</div>
+          <div>
+            <p class="card-kicker">EDUCATION</p>
+            <h3>Systems Analysis and Development</h3>
+            <p>Technology degree focused on software, databases, systems and computing fundamentals.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-year">NOW</div>
+          <div>
+            <p class="card-kicker">CURRENT FOCUS</p>
+            <h3>Software & support portfolio</h3>
+            <p>Developing hands-on projects around help desk workflows, data, troubleshooting and technical documentation.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-year">NEXT</div>
+          <div>
+            <p class="card-kicker">RELOCATION</p>
+            <h3>Porto, Portugal</h3>
+            <p>Preparing for relocation and open to opportunities in software development, IT support and application support.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
       <div class="section-heading">
         <div>
           <p class="eyebrow">SELECTED WORK</p>
-          <h2>Projects that prove the skills.</h2>
+          <h2>Projects designed to <em>prove the skills.</em></h2>
         </div>
-        <span class="section-number">03</span>
+        <span class="section-number">04</span>
       </div>
 
       <div class="projects">
         <article class="project project-featured">
           <div class="project-meta">
             <span>01</span>
-            <span>IN DEVELOPMENT</span>
+            <span class="status">IN DEVELOPMENT</span>
           </div>
           <div class="project-copy">
-            <p class="card-kicker">PYTHON · MYSQL · GIT & GITHUB</p>
+            <p class="card-kicker">PYTHON · MYSQL · HTML & CSS · GIT & GITHUB</p>
             <h3>TechDesk</h3>
-            <p>
-              Help desk and IT asset management project designed to register tickets,
-              organize support information, track status and document technical resolutions.
+            <p class="project-intro">
+              Help desk and IT asset management project built around a real support workflow:
+              registering tickets, organizing information, tracking status and documenting resolutions.
             </p>
-            <div class="project-links">
-              <a href="#" aria-disabled="true">Live demo — soon</a>
-              <a href="#" aria-disabled="true">Source code — soon</a>
+            <div class="feature-list">
+              <span>Ticket management</span>
+              <span>Support workflow</span>
+              <span>Structured data</span>
+              <span>Technical documentation</span>
             </div>
+            <p class="project-note">Repository and live demo will be linked here as the project is completed.</p>
           </div>
-          <div class="project-visual mock-ui">
+          <div class="project-visual mock-ui" aria-hidden="true">
             <div class="mock-window">
               <div class="mock-top"><i></i><i></i><i></i></div>
               <div class="mock-body">
                 <div class="mock-sidebar"></div>
                 <div class="mock-content">
                   <div class="mock-line wide"></div>
-                  <div class="mock-cards">
-                    <span></span><span></span><span></span>
-                  </div>
+                  <div class="mock-cards"><span></span><span></span><span></span></div>
                   <div class="mock-table"></div>
                 </div>
               </div>
@@ -151,39 +211,21 @@ development, troubleshooting and application support.
           </div>
         </article>
 
-        <article class="project">
-          <div class="project-meta">
-            <span>02</span>
-            <span>PLANNED</span>
-          </div>
+        <article class="project project-secondary">
+          <div class="project-meta"><span>02</span><span class="status">PLANNED</span></div>
           <div class="project-copy">
-            <p class="card-kicker">PYTHON · MYSQL · POWER BI</p>
+            <p class="card-kicker">POWER BI · EXCEL · SQL</p>
             <h3>Service Status Dashboard</h3>
-            <p>
-              A compact support dashboard concept using structured data to organize incidents,
-              display status indicators and demonstrate analysis with Python, MySQL and Power BI.
-            </p>
-            <div class="project-links">
-              <a href="#" aria-disabled="true">Coming soon</a>
-            </div>
+            <p>A support-oriented dashboard concept for organizing incidents, status indicators and operational data in a clear visual format.</p>
           </div>
         </article>
 
-        <article class="project">
-          <div class="project-meta">
-            <span>03</span>
-            <span>PLANNED</span>
-          </div>
+        <article class="project project-secondary">
+          <div class="project-meta"><span>03</span><span class="status">PLANNED</span></div>
           <div class="project-copy">
-            <p class="card-kicker">SUPPORT · DOCUMENTATION</p>
+            <p class="card-kicker">SUPPORT · TROUBLESHOOTING · DOCUMENTATION</p>
             <h3>Troubleshooting Casebook</h3>
-            <p>
-              Short technical cases documenting the issue, investigation, root cause,
-              resolution and prevention steps — focused on application support scenarios.
-            </p>
-            <div class="project-links">
-              <a href="#" aria-disabled="true">Coming soon</a>
-            </div>
+            <p>Short technical cases documenting the issue, investigation, root cause, resolution and prevention steps for application support scenarios.</p>
           </div>
         </article>
       </div>
@@ -192,37 +234,42 @@ development, troubleshooting and application support.
     <section class="section support-section" id="support">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">TROUBLESHOOTING</p>
-          <h2>Show the reasoning, not only the result.</h2>
+          <p class="eyebrow">SUPPORT MINDSET</p>
+          <h2>Show the reasoning,<br><em>not only the result.</em></h2>
         </div>
-        <span class="section-number">04</span>
+        <span class="section-number">05</span>
       </div>
 
       <div class="case-grid">
         <article>
           <span>CASE 01</span>
           <h3>Authentication issue</h3>
-          <p>Reproduce → inspect logs → validate user state → identify cause → document resolution.</p>
+          <p>Reproduce → validate user state → inspect the problem → identify cause → document resolution.</p>
         </article>
         <article>
           <span>CASE 02</span>
           <h3>Application unavailable</h3>
-          <p>Check service health → review errors → isolate dependency → restore service → record findings.</p>
+          <p>Confirm the failure → isolate the affected component → test possible causes → restore service → record findings.</p>
         </article>
         <article>
           <span>CASE 03</span>
           <h3>Database connectivity</h3>
-          <p>Validate credentials → test connection → inspect configuration → correct fault → verify recovery.</p>
+          <p>Validate credentials → test the connection → inspect configuration → correct the fault → verify recovery.</p>
         </article>
       </div>
     </section>
 
     <section class="section contact" id="contact">
       <p class="eyebrow">CONTACT</p>
-      <h2>Let’s build something useful.</h2>
+      <h2>Let’s build something <em>useful.</em></h2>
+      <p class="contact-intro">Open to Software Development, IT Support and Application Support opportunities.</p>
       <div class="contact-links">
+        <a href="mailto:matheus.dantas3110@gmail.com">Email ↗</a>
         <a href="https://github.com/matheusdsdantas" target="_blank" rel="noreferrer">GitHub ↗</a>
         <a href="https://www.linkedin.com/in/matheus-ds-dantas/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      </div>
+      <div class="contact-meta">
+        <span>Brazil</span><span>→</span><span>Porto, Portugal</span>
       </div>
       <p class="footer-note">Matheus da Silva Dantas · Software Development · IT Support · Application Support</p>
     </section>
